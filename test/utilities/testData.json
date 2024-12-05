@@ -1,0 +1,32 @@
+{
+    "dropdowns": ["Select User", "Select Role"],
+    "users": ["Sachin", "Approver1", "Approver2", "Approver3"],
+    "roles": ["LEA_Data_Admin", "LEA_Superintendent", "State_Data_Admin", "State_Dept_Head"],
+    "changeRequestDropdown": ["Education Organization", "Category"],
+    "schools": ["Arizona City Elementary School"],
+    "educationCategory": "School",
+    "cards": ["Address", "Phone", "Website"],
+    "cardDetails": [
+        {
+            "type": "changeAddress",
+            "dropdownHeads": ["Address Type", "State", "County Code"],
+            "dropdownValues": ["Physical", "AZ", "Adams"],
+            "textBox": ["StreetNumberName", "ZipCode", "City"],
+            "textBoxValues": ["finalTestSqtreet1", "1202", "testC3ityd22", "testReason12"]
+        },
+        {
+            "type": "changePhone",
+            "dropdownHeads": ["Phone Type"],
+            "dropdownValues": ["Physical"],
+            "textBox": ["PhoneNumber"],
+            "textBoxValues": ["888888888", "testReason2"]
+        },
+        {
+            "type": "changeWebsite",
+            "dropdownHeads": [],
+            "dropdownValues": [],
+            "textBox": ["WebSite"],
+            "textBoxValues": ["https://wdqw2ww.test.c4om/test", "testReason3"]
+        }
+    ]
+}

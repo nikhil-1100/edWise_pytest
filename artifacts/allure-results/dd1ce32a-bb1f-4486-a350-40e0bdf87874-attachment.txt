@@ -1,0 +1,148 @@
+'artifacts' folder cleared.
+'artifacts' and its subdirectories created.
+Navigate to https://web-edmaster-test-wtus-ui-01.azurewebsites.net/
+Spinner disappeared
+Clicked on confing button
+Clicked on Select User
+Clicked on the select button
+Clicked on the Add Request
+Clicked on <Locator frame=<Frame name= url='https://web-edmaster-test-wtus-ui-01.azurewebsites.net/AddRequest'> selector='xpath=//p[text()="Address"]/../..'> Card
+Spinner disappeared
+{'type': 'changeAddress', 'dropdownHeads': ['Address Type', 'State', 'County Code'], 'dropdownValues': ['Physical', 'AZ', 'Adams'], 'textBox': ['StreetNumberName', 'ZipCode', 'City'], 'textBoxValues': ['finalTestSqtreet1', '1202', 'testC3ityd22', 'testReason12']}
+Address Type Physical
+Clicked on Address Type Dropdown
+Clicked on Physical Element
+State AZ
+Clicked on State Dropdown
+Clicked on AZ Element
+County Code Adams
+Clicked on County Code Dropdown
+Clicked on Adams Element
+StreetNumberName finalTestSqtreet1
+Clicked on StreetNumberName
+Clicked on TextBox
+Entered finalTestSqtreet11, into StreetNumberName
+ZipCode 1202
+Clicked on ZipCode
+Clicked on TextBox
+Entered 12026, into ZipCode
+City testC3ityd22
+Clicked on City
+Clicked on TextBox
+Entered testC3ityd229, into City
+Clicked on TextBox
+Entered testReason124, into reason
+Clicked on the save button
+Clicked on <Locator frame=<Frame name= url='https://web-edmaster-test-wtus-ui-01.azurewebsites.net/AddRequest'> selector='xpath=//p[text()="Phone"]/../..'> Card
+Spinner disappeared
+{'type': 'changePhone', 'dropdownHeads': ['Phone Type'], 'dropdownValues': ['Physical'], 'textBox': ['PhoneNumber'], 'textBoxValues': ['888888888', 'testReason2']}
+Phone Type Physical
+Clicked on Phone Type Dropdown
+Clicked on Physical Element
+PhoneNumber 888888888
+Clicked on PhoneNumber
+Clicked on TextBox
+Entered 8888888884, into PhoneNumber
+Clicked on TextBox
+Entered testReason25, into reason
+Clicked on the save button
+Clicked on <Locator frame=<Frame name= url='https://web-edmaster-test-wtus-ui-01.azurewebsites.net/AddRequest'> selector='xpath=//p[text()="Website"]/../..'> Card
+Spinner disappeared
+{'type': 'changeWebsite', 'dropdownHeads': [], 'dropdownValues': [], 'textBox': ['WebSite'], 'textBoxValues': ['https://wdqw2ww.test.c4om/test', 'testReason3']}
+WebSite https://wdqw2ww.test.c4om/test
+Clicked on WebSite
+Clicked on TextBox
+Entered https://wdqw2ww.test.c4om/test1, into WebSite
+Clicked on TextBox
+Entered testReason37, into reason
+Clicked on the save button
+Clicked on save and sumbit
+Clicked on Sumit all button
+['7706', '7707', '7708']
+Clicked on Select User
+Clicked on the select button
+Spinner disappeared
+Clicked on Approval Queue
+Spinner disappeared
+7706
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
+7707
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
+7708
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
+Clicked on Select User
+Clicked on the select button
+Spinner disappeared
+Clicked on Approval Queue
+Spinner disappeared
+7706
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
+7707
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
+7708
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
+Clicked on Select User
+Clicked on the select button
+Spinner disappeared
+Clicked on Approval Queue
+Spinner disappeared
+7706
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
+7707
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
+7708
+Clicked on Assign to me
+Clicked on Approver
+Clicked on TextBox
+Entered Approved, into Commnent Box
+Clicked on status Dropdown
+Clicked on Approved
+Clicked on Submit Button
