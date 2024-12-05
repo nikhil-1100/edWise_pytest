@@ -1,11 +1,9 @@
-import pytest
 import os
 import shutil
 import subprocess
-from playwright.sync_api import sync_playwright
+import pytest
 from test.page_objects.edWise.common_page import Common
-import allure
-
+from playwright.sync_api import sync_playwright
 
 @pytest.fixture(scope='session', autouse=True)
 def setup_artifacts_dir():
@@ -26,11 +24,20 @@ def setup_artifacts_dir():
     return allure_results_dir, allure_report_dir
 
 
+def pytest_addoption(parser):
+    """Add CLI options for headless mode."""
+    parser.addoption(
+        "--headless",
+        action="store_true",
+        default=False,
+        help="Run tests in headless mode"
+    )
+
+
 @pytest.fixture(scope='session')
 def browser(request):
     """Session-scoped fixture to launch a browser."""
     with sync_playwright() as p:
-        # Use environment variable or default value for headless mode
         headless_mode = request.config.getoption("--headless")
         try:
             browser = p.chromium.launch(
@@ -38,9 +45,6 @@ def browser(request):
                 args=['--start-maximized']
             )
             yield browser
-        except Exception as e:
-            print(f"Error launching browser: {e}")
-            raise
         finally:
             browser.close()
 
@@ -58,32 +62,22 @@ def page(request, browser):
         context.close()
 
 
-def pytest_addoption(parser):
-    """Add CLI options for headless mode and Allure results directory."""
-    parser.addoption(
-        "--headless",
-        action="store_true",
-        default=False,
-        help="Run tests in headless mode"
-    )
-
-
-def pytest_configure(config):
-    """Configure pytest to store Allure results in the artifacts directory."""
-    artifacts_dir = "artifacts/allure-results"
-    config.option.allure_report_dir = artifacts_dir
-
-
 def pytest_sessionfinish(session, exitstatus):
     """Generate the Allure report after tests complete."""
     allure_results_dir = "artifacts/allure-results"
     allure_report_dir = "artifacts/allure-report"
 
+    # Detect the operating system
+    is_windows = os.name == 'nt'
+
+    # Allure executable path
+    allure_cmd = "allure" if not is_windows else "C:/Users/NikhilD/AppData/Roaming/npm/allure"
+
     # Generate Allure report
     if os.path.exists(allure_results_dir):
         try:
             subprocess.run(
-                ["C:/Users/NikhilD/AppData/Roaming/npm/allure", "generate", allure_results_dir, "-o", allure_report_dir, "--clean"],
+                [allure_cmd, "generate", allure_results_dir, "-o", allure_report_dir, "--clean"],
                 check=True
             )
             print(f"Allure report generated at: {allure_report_dir}")

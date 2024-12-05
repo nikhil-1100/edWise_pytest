@@ -29,20 +29,16 @@ jobs:
         pip install flake8 pytest pytest-playwright allure-pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Install Allure via APT repository
+    - name: Install Allure CLI
       run: |
-        # Add Allure's official GPG key and repository
         sudo apt-get update
         sudo apt-get install -y openjdk-11-jre
-        sudo apt-get install -y curl
         curl -sL https://github.com/allure-framework/allure2/releases/latest/download/allure-linux-x64 -o /usr/local/bin/allure
         chmod +x /usr/local/bin/allure
 
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Run tests with pytest and collect Allure results
